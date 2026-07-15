@@ -31,7 +31,9 @@ const Logo = styled.h1`
 color:rgb(187, 205, 243);
 font-size:44px;
 font-family: "Lora", serif;
-
+@media (max-width:768px){
+    font-size:30px;
+}
 `;
 
 
@@ -40,7 +42,9 @@ const Menu = styled.ul`
 display:flex;
 gap:30px;
 list-style:none;
-
+  @media (max-width:768px){
+    gap:15px;
+  }
 
 li{
 
@@ -49,11 +53,15 @@ cursor:pointer;
 color:#F8FAFC;
 
 transition:.3s;
+font-size:18px;
 
+@media (max-width:768px){
+    font-size:14px;
 
+}
 &:hover{
 
-color:#b2b3fa;
+color:#c6c7f5;
 
 }
 
@@ -76,9 +84,10 @@ Karla Araya
 
 <Menu>
 
-<li>Inicio</li>
 
 <li>Sobre mí</li>
+
+<li>Formación</li>
 
 <li>Proyectos</li>
 
