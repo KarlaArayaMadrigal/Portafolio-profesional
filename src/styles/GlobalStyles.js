@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
 
 body{
     font-family: 'Poppins', sans-serif;
-    background:#0F172A;
+    background: whitesmoke;
     color:#F8FAFC;
 }
 
