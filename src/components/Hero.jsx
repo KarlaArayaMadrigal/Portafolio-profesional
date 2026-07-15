@@ -36,11 +36,7 @@ function Hero (){
     <div>
 
     <Title>
-        Hola, me llamo 
-        
-        <span>
-            Karla Araya
-        </span>
+       
     </Title>
     </div>
    </Section>
