@@ -26,15 +26,6 @@ z-index:100;
 `;
 
 
-const Logo = styled.h1`
-
-color:rgb(187, 205, 243);
-font-size:44px;
-font-family: "Lora", serif;
-@media (max-width:768px){
-    font-size:30px;
-}
-`;
 
 
 const Menu = styled.ul`
@@ -50,7 +41,7 @@ li{
 
 cursor:pointer;
 
-color:#F8FAFC;
+color:#fcf8fb;
 
 transition:.3s;
 font-size:18px;
@@ -61,7 +52,7 @@ font-size:18px;
 }
 &:hover{
 
-color:#c6c7f5;
+color:#ba0163;
 
 }
 
@@ -76,10 +67,6 @@ function Navbar(){
 return(
 
 <Nav>
-
-<Logo>
-Karla Araya
-</Logo>
 
 
 <Menu>

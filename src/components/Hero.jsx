@@ -12,7 +12,6 @@ align-items:center;
 text-align:center;
 
 padding:0 20px;
-background-color: #010407;
 
 `;
 
