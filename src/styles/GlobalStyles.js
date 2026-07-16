@@ -1,33 +1,32 @@
 import { createGlobalStyle } from "styled-components";
 
+const GlobalStyle = createGlobalStyle`
 
-const GlobalStyles = createGlobalStyle`
+:root{
+  --background:#0D1117;
+  --surface:#161B22;
+  --surface2:#21262D;
+
+  --white:#F5F5F5;
+  --gray:#A1A1AA;
+
+  --purple:#8B5CF6;
+  --pink:#EC4899;
+  --pinkHover:#F472B6;
+}
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-
 
 body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #110118;
-    color:#F8FAFC;
+  background:var(--background);
+  color:var(--white);
+  font-family:'Poppins',sans-serif;
 }
-
-
-html{
-    scroll-behavior:smooth;
-}
-
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
 
 `;
 
-export default GlobalStyles;
+export default GlobalStyle;
