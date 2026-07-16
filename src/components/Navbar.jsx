@@ -2,39 +2,32 @@ import styled from "styled-components";
 
 
 const Nav = styled.nav`
+  position: fixed;
+  top: 15px;
+  left: 30%;
+  transform: translateX(-50%);
 
-position:fixed;
-top:0;
-width:100%;
-padding:20px 10%;
+  width: 45%;
+  padding: 12px 5%;
 
-display:flex;
-justify-content:space-between;
-align-items:center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-background:rgb(0, 11, 34);
-backdrop-filter:blur(10px);
+  background: rgba(22, 27, 34, 0.75);
+  backdrop-filter: blur(18px);
 
-z-index:100;
+  border: 1px solid rgba(236, 72, 154, 0.541);
 
-@media (max-width: 768px) {
-    padding: 15px 5%;
-}
-    
+  border-radius: 50px;
 
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 
+  z-index: 100;
 `;
 
 
-const Logo = styled.h1`
 
-color:rgb(187, 205, 243);
-font-size:44px;
-font-family: "Lora", serif;
-@media (max-width:768px){
-    font-size:30px;
-}
-`;
 
 
 const Menu = styled.ul`
@@ -46,27 +39,23 @@ list-style:none;
     gap:15px;
   }
 
-li{
-
-cursor:pointer;
-
-color:#F8FAFC;
-
-transition:.3s;
-font-size:18px;
-
-@media (max-width:768px){
-    font-size:14px;
-
-}
-&:hover{
-
-color:#c6c7f5;
-
+li {
+  cursor: pointer;
+  color: #fcf8fb;
+  transition: 0.4s;
+  font-size: 18px;
 }
 
-
+li:hover {
+  color: #fff;
+  text-shadow: 
+    0 0 5px #f200ff,
+    0 0 10px #ff6fee,
+    0 0 20px #ff6fee,
+    0 0 40px #ff6fee;
+  transform: scale(1.1); 
 }
+
 
 `;
 
@@ -76,10 +65,6 @@ function Navbar(){
 return(
 
 <Nav>
-
-<Logo>
-Karla Araya
-</Logo>
 
 
 <Menu>
