@@ -64,7 +64,7 @@ const Image = styled.img`
 `;
 
 const Information = styled.section`
-  padding: 100px 10%;
+  padding: 120px 10%;
 
   background:
     linear-gradient(
@@ -79,33 +79,92 @@ const Information = styled.section`
 `;
 
 const InfoContainer = styled.div`
+  position: relative;
+
   max-width: 900px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 60px;
 
-  background: rgba(22, 27, 34, 0.55);
+  border-radius: 30px;
 
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(22, 27, 34, 0.45);
 
-  border: 1px solid rgba(236, 72, 153, 0.2);
-  border-radius: 25px;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  overflow: hidden;
 
   box-shadow:
-    0 10px 35px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(236, 72, 153, 0.2);
+    0 10px 40px rgba(0, 0, 0, .45),
+    0 0 25px rgba(236, 72, 153, .25),
+    0 0 45px rgba(139, 92, 246, .2);
+
+  &::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    padding:2px;
+    border-radius:30px;
+
+    background: linear-gradient(
+      135deg,
+      #EC4899,
+      #C026D3,
+      #8B5CF6
+    );
+
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events:none;
+  }
+
+  transition: .4s;
+
+  &:hover{
+    transform: translateY(-8px);
+
+    box-shadow:
+      0 15px 50px rgba(0,0,0,.5),
+      0 0 35px rgba(236,72,153,.4),
+      0 0 60px rgba(139,92,246,.35);
+  }
 `;
 
 const InfoTitle = styled.h2`
-  font-size: 38px;
-  margin-bottom: 25px;
+  font-size: 42px;
   color: #EC4899;
+  margin-bottom: 25px;
+  text-align: center;
+
+  position: relative;
+
+  &::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    margin:15px auto 0;
+
+    border-radius:10px;
+
+    background: linear-gradient(
+      90deg,
+      #EC4899,
+      #8B5CF6
+    );
+  }
 `;
 
 const InfoText = styled.p`
   font-size: 18px;
-  line-height: 1.8;
-  color: #D4D4D8;
+  line-height: 1.9;
+  color: #E4E4E7;
+  margin-bottom: 20px;
 `;
 
 function Hero() {
@@ -127,18 +186,19 @@ function Hero() {
           <InfoTitle>Sobre mí</InfoTitle>
 
           <InfoText>
-            Soy estudiante de Licenciatura en Sistemas con énfasis en
-            Seguridad de la Información y desarrolladora Frontend con
-            experiencia en React, JavaScript y TypeScript. Me apasiona
-            crear interfaces modernas, responsivas y fáciles de usar.
-          </InfoText>
+  Soy <strong>Ingeniera Informática</strong> y actualmente curso la
+  Licenciatura en Sistemas con énfasis en Seguridad de la Información.
+  Me especializo en desarrollo Frontend utilizando React, JavaScript y
+  TypeScript, creando interfaces modernas, responsivas y enfocadas en una
+  excelente experiencia de usuario.
+</InfoText>
 
-          <InfoText>
-            Actualmente continúo fortaleciendo mis habilidades en
-            desarrollo web y ciberseguridad, mientras construyo proyectos
-            que combinan diseño, funcionalidad y buenas prácticas de
-            programación.
-          </InfoText>
+<InfoText>
+  Me apasiona el desarrollo web y la ciberseguridad, por lo que continúo
+  fortaleciendo mis conocimientos a través de nuevos proyectos y aprendizaje
+  constante. Disfruto desarrollar soluciones que combinen diseño,
+  funcionalidad, rendimiento y buenas prácticas de programación.
+</InfoText>
         </InfoContainer>
       </Information>
     </>
