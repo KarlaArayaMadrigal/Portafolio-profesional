@@ -3,27 +3,27 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   position: fixed;
-  top: 0;
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 4px;
-  margin-left: 5px;
-  padding: 10px 5%;
+  top: 15px;
+  left: 30%;
+  transform: translateX(-50%);
+
+  width: 45%;
+  padding: 12px 5%;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background: rgba(177, 6, 100, 0.997); 
-  backdrop-filter: blur(10px);           
-  border-radius: 45px 45px 45px 45px;
+  background: rgba(22, 27, 34, 0.75);
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(236, 72, 154, 0.541);
+
+  border-radius: 50px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 
   z-index: 100;
-
-  @media (max-width: 768px) {
-    width: 95%;
-    padding: 8px 3%;
-  }
 `;
 
 
